@@ -152,3 +152,55 @@
 
 # print(sum)
 
+# def first(size, *args):
+#     # Використовуємо *args для збору позиційних аргументів
+#     return size + sum(args)
+
+# def second(size, **kwargs):
+#     # Використовуємо **kwargs для збору ключових аргументів
+#     return size + sum(kwargs.values())
+
+# # Приклади використання
+# result1 = first(5, "first", "second", "third")
+# print(result1)  # Результат: 14 (5 + 3 + 4 + 3)
+
+# result2 = first(1, "Alex", "Boris")
+# print(result2)  # Результат: 9 (1 + 4 + 5)
+
+# result3 = second(3, comment_one="first", comment_two="second", comment_third="third")
+# print(result3)  # Результат: 13 (3 + 3 + 6 + 4)
+
+# result4 = second(10, comment_one="Alex", comment_two="Boris")
+# print(result4)  # Результат: 20 (10 + 4 + 5)
+
+
+def cost_delivery(quantity, *_, discount=0):
+    if discount < 0 or discount > 1:
+        raise ValueError("Знижка повинна бути від 0 до 1")
+
+    first_item_price = 5
+    additional_item_price = 2
+
+    total_price = first_item_price + (quantity - 1) * additional_item_price
+
+    if discount > 0:
+        total_price = total_price * (1 - discount)
+
+    return total_price
+
+    
+res = cost_delivery(2, 1, 2, 3)
+print(res)
+
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Приклади використання
+n = 10  # Виберіть бажаний номер члена ряду Фібоначчі
+result = fibonacci(n)
+print(f"Член ряду Фібоначчі під номером {n} дорівнює {result}")
