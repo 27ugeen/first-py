@@ -376,19 +376,19 @@
 
 # //================================================================
 
-import re
+# import re
 
-def find_all_links(text):
-    result = []
-    iterator = re.finditer(r'https?://[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*\.[A-Za-z]{2,}', text)
-    for match in iterator:
-        result.append(match.group())
-    return result
+# def find_all_links(text):
+#     result = []
+#     iterator = re.finditer(r'https?://[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*\.[A-Za-z]{2,}', text)
+#     for match in iterator:
+#         result.append(match.group())
+#     return result
 
-# Приклад використання
-text = "The main search site in the world is https://www.google.com The main social network for people in the world is https://www.facebook.com But programmers have their own social network http://github.com There they share their code. some url to check https://www..facebook.com www.facebook.com"
-links = find_all_links(text)
-print(links)
+# # Приклад використання
+# text = "The main search site in the world is https://www.google.com The main social network for people in the world is https://www.facebook.com But programmers have their own social network http://github.com There they share their code. some url to check https://www..facebook.com www.facebook.com"
+# links = find_all_links(text)
+# print(links)
 
 
 
